@@ -5,7 +5,7 @@ file = open("prime.dat" , "w")
 N = int(sys.argv[1])
 count = 0
 List = list(range(0, N+1))
-start = time.time()
+start = time.clock()
 for i in range(2, N+1):
     if i in List:
         file.write(str(i)+"\n")
@@ -16,5 +16,5 @@ for i in range(2, N+1):
         else:
             continue
 file.close()
-end = time.time()
+end = time.clock()
 print("Found " + str(count) + " Prime numbers smaller than " + str(N) + " in " + str (end-start) + " seconds")
